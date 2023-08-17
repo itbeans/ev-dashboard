@@ -24,6 +24,68 @@ export class ReleaseNotesComponent {
   public buildReleaseNotes() {
     this.releaseNotes = [
       {
+        version: '2.7.9',
+        date: new Date('2023-06-19'),
+        componentChanges: [
+          {
+            name: 'Dashboard',
+            changes: [
+              'New release - no changes'
+            ],
+          },
+        ],
+      },
+      {
+        version: '2.7.8',
+        date: new Date('2023-04-18'),
+        componentChanges: [
+          {
+            name: 'Dashboard',
+            changes: [
+              'OCPI - Roaming - Push CDRs only when the extra inactivity is known',
+              'Transactions - fix - Avoid closing transactions too early'
+            ],
+          },
+        ],
+      },
+      {
+        version: '2.7.7',
+        date: new Date('2023-04-04'),
+        componentChanges: [
+          {
+            name: 'Dashboard',
+            changes: [
+              'Rate Limiter - new settings to prevent DDOS',
+              'Monitoring - new metrics on notifications',
+              'Smart Charging - fix - targetStateOfCharge can be null'
+            ],
+          },
+        ],
+      },
+      {
+        version: '2.7.6',
+        date: new Date('2023-03-28'),
+        componentChanges: [
+          {
+            name: 'Dashboard',
+            changes: [
+              'Smart Charging - Advanced Parameters for Departure Time',
+              'Smart Charging - Limit the number of periods to 16 (4 hours)',
+              'Smart Charging - fix - default value not properly used',
+              'Billing - Stripe Integration - update dependency to the latest API version - 2022-11-15',
+              'Pricing - fix - Delete pricing definitions',
+              'Security - Removed vulnerability from strong-soap dependencies',
+              'Statistics - Export to CSV files - filtering is now taken into account',
+              'Authorizations - Migrated Statistics endpoints to the new authorization framework',
+              'Authorizations - Site owners can change the power limit of a site',
+              'OCPP - Allow a distinct CPMS Domain Name per Tenant',
+              'Performance - Fix - Partial index creation',
+              'Performance - some logs less verbose'
+            ],
+          },
+        ],
+      },
+      {
         version: '2.7.5',
         date: new Date('2022-11-21'),
         componentChanges: [

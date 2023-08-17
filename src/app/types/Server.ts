@@ -2,6 +2,9 @@
 export enum ServerAction {
   UNKNOWN_ACTION = 'Unknown',
 
+  RATE_LIMITER = 'RateLimiter',
+  SHIELD ='Shield',
+
   SAP_CONCUR_REQUEST = 'SapConcurRequest',
   RECAPTCHA_REQUEST = 'RecaptchaRequest',
   GREENCOM_REQUEST = 'GreencomRequest',
@@ -274,12 +277,15 @@ export enum ServerAction {
   WS_CLIENT_CONNECTION_CLOSE = 'WsClientConnectionClose',
   WS_CLIENT_CONNECTION_OPEN = 'WsClientConnectionOpen',
   WS_CLIENT_CONNECTION_ERROR = 'WsClientConnectionError',
+  WS_CLIENT_CONNECTION_PING = 'WsClientConnectionPing',
+  WS_CLIENT_CONNECTION_PONG = 'WsClientConnectionPong',
 
   NOTIFICATION = 'Notification',
   CHARGING_STATION_STATUS_ERROR = 'ChargingStationStatusError',
   CHARGING_STATION_REGISTERED = 'ChargingStationRegistered',
   END_OF_CHARGE = 'EndOfCharge',
   OPTIMAL_CHARGE_REACHED = 'OptimalChargeReached',
+  SESSION_STARTED = 'SessionStarted',
   END_OF_SESSION = 'EndOfSession',
   REQUEST_PASSWORD = 'RequestPassword',
   USER_ACCOUNT_STATUS_CHANGED = 'UserAccountStatusChanged',
@@ -359,6 +365,7 @@ export enum ServerAction {
   TENANTS = 'Tenants',
   TENANT = 'Tenant',
   TENANT_UPDATE = 'TenantUpdate',
+  TENANT_UPDATE_DATA = 'TenantUpdateData',
   TENANT_DELETE = 'TenantDelete',
   TENANT_LOGO = 'TenantLogo',
 
@@ -692,6 +699,7 @@ export enum RESTServerRoute {
 
   REST_BILLING_SETTING = 'billing-setting', // GET and PUT
   REST_BILLING_CHECK = 'billing/check',
+  REST_BILLING_USER_SYNCHRONIZE = 'billing/users/:id/synchronize',
   REST_BILLING_CLEAR_TEST_DATA = 'billing/clearTestData',
 
   REST_BILLING_TAXES = 'billing/taxes',
